@@ -1,14 +1,3 @@
-// make the rigt sound when key is pressed
-// Deconstruct
-// make any sound if a to l is pressed
-  // get keys
-  // get key according to key that was pressed
-  // listen for a key pressed
-  // make a sound if that key pressed
-  // select the right audio from the DOM with << `` >>, which allow us to put a variable into a str
-    //with this we select the right audio file, inserting the keyCode pressed in to the str.
-    // play the audio, but rewind it every time the key is pressed, so in can be play over and over
-
 const keysDiv = document.querySelector('body')
 console.log(keysDiv)
 
