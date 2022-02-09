@@ -43,6 +43,25 @@
 <button></button>
 <script>
 
+const divs = document.querySelectorAll('div');
+
+function logText(e){
+  console.log(this);
+  // Stop bubling the even UP
+  e.stopPropagation(); // clicks the one that you actually want to click. Only if capture is false. 
+}
+// BUBLELING: when you click something all the other parents listen to it too by default, we you just dont catch it because most of the time we are not listening for it. 
+// CAPTURE: The browser first does this, which is it looks from Up the DOM until it reaches your click, then it starts doing the bubleling  
+divs.forEach(div => div.addEventListener('click', logText, {
+  capture: false
+}));
+
+const btn = document.querySelector('button');
+btn.addEventListener('click', logText, {
+  once: true
+});
+// document.body.addEventListener('click', logText);
+
 </script>
 </body>
 </html>
